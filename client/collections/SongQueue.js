@@ -20,11 +20,19 @@ var SongQueue = Songs.extend({
       if (this.models[0]) {
         this.playFirst();
       }
-    }, this)
+    }, this);
+
+    // this.on('enqueue', function(song){
+    //   console.log("song added to queue through sonqueue's enqueue listener")
+    //   this.add(song);
+
+    // })
   },
 
   playFirst: function() {
     this.models[0].play();  
   }
+
+  
 
 });
