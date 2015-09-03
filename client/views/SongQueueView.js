@@ -6,10 +6,7 @@ var SongQueueView = Backbone.View.extend({
   initialize: function() {
     this.render();
 
-    console.log(this.collection);
-
     this.collection.on("add", function(){
-      console.log("queue update event handler firing");
       this.render();
     }, this);
 
@@ -21,8 +18,6 @@ var SongQueueView = Backbone.View.extend({
 
 
   render: function() {
-
-
 
     this.$el.children().detach();
 

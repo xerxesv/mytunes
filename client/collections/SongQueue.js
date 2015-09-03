@@ -31,7 +31,10 @@ var SongQueue = Songs.extend({
 
   playFirst: function() {
     this.models[0].play();  
-  }
+  },
+
+  
+
 
   
 
