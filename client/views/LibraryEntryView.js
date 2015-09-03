@@ -7,7 +7,10 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
-      this.model.play();
+      this.model.enqueue();  
+      if ($('audio').attr('src') === undefined) {
+        this.model.play();
+      } 
     }
   },
 
